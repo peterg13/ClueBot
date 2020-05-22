@@ -1,9 +1,9 @@
 from django.shortcuts import render
-from cards.card_handler import loadCards
+from clue_bot.cards.card_handler import loadCards
 
 # Create your views here.
 
 def home(request):
     suspects, weapons, rooms = loadCards()
-    print(suspects)
+    print(suspects[0].getName())
     return render(request, 'clue_bot/home.html')

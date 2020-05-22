@@ -1,5 +1,5 @@
 import json
-from card import Card
+from .card import Card
 
 #loads the cards from a json file, creates a card object for each from the card class, returns the lists of the cards
 def loadCards():
