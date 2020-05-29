@@ -1,20 +1,24 @@
 .card-list{
-	margin-left: 25px;
-	margin-right: 25px;
+	border-style: solid;
+	width: calc(100%/3);
 }
 
 #cards{
+	margin-left: 25px;
+	margin-right: 25px;
+	border-style: solid;
 	color: blue;
+	display: flex;
 }
 
 #suspects{
-	border-style: solid;
+	color: red;
 }
 
 #weapons{
-	border-style: solid;
+	color: green;
 }
 
 #rooms{
-	border-style: solid;
+	color: black;
 }
