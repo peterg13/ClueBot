@@ -28,7 +28,11 @@
                         </tr>
                     </thead>
                     <tbody>
-                        
+                        {% for suspect in suspects %}
+                            <tr>
+                                <td>{{ suspect.name }}</td>
+                            </tr>
+                        {% endfor %}
                     </tbody>
                 </table>
             </div>
@@ -40,7 +44,11 @@
                         </tr>
                     </thead>
                     <tbody>
-                        
+                        {% for weapon in weapons %}
+                            <tr>
+                                <td>{{ weapon.name }}</td>
+                            </tr>
+                        {% endfor %}
                     </tbody>
                 </table>
             </div>
@@ -52,7 +60,11 @@
                         </tr>
                     </thead>
                     <tbody>
-                        
+                        {% for room in rooms %}
+                            <tr>
+                                <td>{{ room.name }}</td>
+                            </tr>
+                        {% endfor %}
                     </tbody>
                 </table>
             </div>

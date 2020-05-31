@@ -8,8 +8,19 @@ def home(request):
     #weapons - list of class cards that contain the suspects
     #rooms - list of class cards that contain the suspects
     suspects, weapons, rooms = loadCards()
-    
 
+    context = {
+    	'suspects': cardsToJSON(suspects),
+    	'weapons': cardsToJSON(weapons),
+    	'rooms': cardsToJSON(rooms)
+    }
+  
+    return render(request, 'clue_bot/home.html', context)
 
+def cardsToJSON(cards):
+	JSONArray = []
 
-    return render(request, 'clue_bot/home.html')
+	for card in cards:
+		JSONArray.append({'name': card.getName()})
+
+	return JSONArray
